@@ -1,0 +1,99 @@
+==============
+Form fieldsets
+==============
+
+Fieldsets are a way to group fields from schema definitions, so they provide
+enough information, to be grouped in the rendered output.
+
+First we define two test schemata:
+
+    >>> from zope import interface, schema
+    >>> class IText(interface.Interface):
+    ...     abstract = schema.TextLine(title=u"Abstract")
+    ...     text = schema.TextLine(title=u"Text")
+
+    >>> class IAuthor(interface.Interface):
+    ...     name = schema.TextLine(title=u"Name")
+    ...     birthday = schema.TextLine(title=u"Birthday")
+
+And set up a normal form from the interface, IText.
+
+    >>> from zope.formlib import form
+    >>> class MySimpleForm:
+    ...     form_fields = form.Fields(IText)
+
+We make sure this simple form actually works:
+
+    >>> len(MySimpleForm.form_fields)
+    2
+
+    >>> [w.__name__ for w in MySimpleForm.form_fields]
+    ['abstract', 'text']
+
+Now we set up a regular form combining the two interfaces:
+
+    >>> class MyCombinedForm:
+    ...     form_fields = form.Fields(IText, IAuthor)
+
+    >>> len(MyCombinedForm.form_fields)
+    4
+
+    >>> [w.__name__ for w in MyCombinedForm.form_fields]
+    ['abstract', 'text', 'name', 'birthday']
+
+And finally we use our fieldsets at the base level:
+
+    >>> from plone.fieldsets import FormFieldsets
+    >>> class MyBaseFieldsetsForm:
+    ...     form_fields = FormFieldsets(IText, IAuthor)
+
+This mimics the exact behaviour of the normal forms:
+
+    >>> len(MyBaseFieldsetsForm.form_fields)
+    4
+
+    >>> [w.__name__ for w in MyBaseFieldsetsForm.form_fields]
+    ['abstract', 'text', 'name', 'birthday']
+
+But we have the additional fieldsets attribute available:
+
+    >>> len(MyBaseFieldsetsForm.form_fields.fieldsets)
+    0
+
+In order to use the fieldsets we wrap the two schemata first:
+
+    >>> textset = FormFieldsets(IText)
+    >>> textset.label = u'Label for text fieldset.'
+    
+    >>> authorset = FormFieldsets(IAuthor)
+    >>> authorset.label = u'Label for author fieldset.'
+
+And make a form of those two fieldsets:
+
+    >>> class MyFieldsetsForm:
+    ...     form_fields = FormFieldsets(textset, authorset)
+
+The fieldsets still behave exactly like normal fields:
+
+    >>> fields = MyFieldsetsForm.form_fields
+    >>> len(fields)
+    4
+
+    >>> [w.__name__ for w in fields]
+    ['abstract', 'text', 'name', 'birthday']
+
+But have the desired additional information, which can be used to iterate over
+the fieldsets:
+
+    >>> len(fields.fieldsets)
+    2
+
+    >>> fields.fieldsets[0].label
+    u'Label for text fieldset.'
+    >>> [w.__name__ for w in fields.fieldsets[0]]
+    ['abstract', 'text']
+
+    >>> fields.fieldsets[1].label
+    u'Label for author fieldset.'
+    >>> [w.__name__ for w in fields.fieldsets[1]]
+    ['name', 'birthday']

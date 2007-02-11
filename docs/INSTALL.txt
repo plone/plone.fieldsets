@@ -1,0 +1,7 @@
+plone.fieldsets Installation
+============================
+
+ * When you're reading this you have probably already run 
+   ``easy_install plone.fieldsets``. Find out how to install setuptools
+   (and EasyInstall) here:
+   http://peak.telecommunity.com/DevCenter/EasyInstall

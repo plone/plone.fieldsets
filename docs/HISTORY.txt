@@ -1,0 +1,11 @@
+Changelog for plone.fieldsets
+
+    (name of developer listed in brackets)
+
+plone.fieldsets - 1.0a3 Unreleased
+
+    - Initial implementation of the fieldsets class and the edit form support.
+      [hannosch]
+
+    - Initial package structure.
+      [zopeskel]
