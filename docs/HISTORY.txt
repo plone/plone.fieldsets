@@ -2,7 +2,11 @@ Changelog for plone.fieldsets
 
     (name of developer listed in brackets)
 
-plone.fieldsets - 1.0a3 Unreleased
+plone.fieldsets - 1.0b1 Released March 5, 2007
+
+    - Fixed error reporting by referencing the widgets on the form itself on
+      the individual fieldsets rather than copying them.
+      [duncan, nouri]
 
     - Initial implementation of the fieldsets class and the edit form support.
       [hannosch]

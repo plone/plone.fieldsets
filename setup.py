@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '1.0a3'
+version = '1.0b1'
 
 setup(name='plone.fieldsets',
       version=version,
@@ -9,6 +9,7 @@ setup(name='plone.fieldsets',
       long_description="""\
 """,
       classifiers=[
+        "Framework :: Plone",
         "Framework :: Zope2",
         "Framework :: Zope3",
         "Programming Language :: Python",
