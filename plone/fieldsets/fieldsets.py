@@ -14,6 +14,7 @@ class FormFieldsets(FormFields):
 
     id = ''
     label = None
+    description = None
     fieldsets = ()
 
     def __init__(self, *args, **kw):

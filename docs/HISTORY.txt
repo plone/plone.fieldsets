@@ -2,6 +2,16 @@ Changelog for plone.fieldsets
 
     (name of developer listed in brackets)
 
+plone.fieldsets - 1.0b3 Released March 5, 2007
+
+    - Added new optional description attribute to fieldsets.
+      [hannosch]
+
+plone.fieldsets - 1.0b2 Released May 1, 2007
+
+    - No changes.
+      [hannosch]
+
 plone.fieldsets - 1.0b1 Released March 5, 2007
 
     - Fixed error reporting by referencing the widgets on the form itself on

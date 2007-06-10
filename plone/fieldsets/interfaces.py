@@ -10,6 +10,8 @@ class IFormFieldsets(IFormFields):
 
     label = Attribute("The label used for the fieldset")
 
+    description = Attribute("An optional description used for the fieldset")
+
     fieldsets = Attribute("The fieldset definitions")
 
     def __add__(form_fields):
