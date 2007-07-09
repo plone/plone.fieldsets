@@ -2,6 +2,11 @@ Changelog for plone.fieldsets
 
     (name of developer listed in brackets)
 
+plone.fieldsets - 1.0rc1 Released July 9, 2007
+
+    - Removed useless setup.cfg.
+      [hannosch]
+
 plone.fieldsets - 1.0b3 Released March 5, 2007
 
     - Added new optional description attribute to fieldsets.
