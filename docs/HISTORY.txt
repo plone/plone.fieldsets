@@ -2,6 +2,19 @@ Changelog for plone.fieldsets
 
     (name of developer listed in brackets)
 
+plone.fieldsets - 1.0rc3 Released July 28, 2007
+
+    - Corrected missing history.
+      [hannosch]
+
+plone.fieldsets - 1.0rc2 Released July 27, 2007
+
+    - Removed unnecessary adapters definition in FieldsetsInputForm.
+      [davconvent]
+
+    - Added FieldsetsInputForm to the available fieldsets forms.
+      [davconvent]
+
 plone.fieldsets - 1.0rc1 Released July 9, 2007
 
     - Removed useless setup.cfg.

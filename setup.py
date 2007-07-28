@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import sys, os
 
-version = '1.0'
+version = '1.0rc3'
 
 setup(name='plone.fieldsets',
       version=version,
@@ -27,7 +27,4 @@ setup(name='plone.fieldsets',
       install_requires=[
         'setuptools',
       ],
-      entry_points="""
-      # -*- Entry points: -*-
-      """,
       )
