@@ -2,6 +2,11 @@ Changelog for plone.fieldsets
 
     (name of developer listed in brackets)
 
+plone.fieldsets - 1.0 Released August 13, 2007
+
+    - No changes.
+      [hannosch]
+
 plone.fieldsets - 1.0rc3 Released July 28, 2007
 
     - Corrected missing history.
