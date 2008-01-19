@@ -9,6 +9,13 @@ from zope.schema.interfaces import IField
 from interfaces import IFormFieldsets
 
 class FormFieldsets(FormFields):
+    """
+    Let's make sure that this implementation actually fulfills the API.
+
+      >>> from zope.interface.verify import verifyClass
+      >>> verifyClass(IFormFieldsets, FormFieldsets)
+      True
+      """
 
     implements(IFormFieldsets)
 

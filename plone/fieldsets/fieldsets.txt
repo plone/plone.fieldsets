@@ -47,7 +47,7 @@ And finally we use our fieldsets at the base level:
     >>> class MyBaseFieldsetsForm:
     ...     form_fields = FormFieldsets(IText, IAuthor)
 
-This mimics the exact behaviour of the normal forms:
+This mimics the exact behavior of the normal forms:
 
     >>> len(MyBaseFieldsetsForm.form_fields)
     4
@@ -97,3 +97,80 @@ the fieldsets:
     u'Label for author fieldset.'
     >>> [w.__name__ for w in fields.fieldsets[1]]
     ['name', 'birthday']
+
+
+Edit and input forms
+--------------------
+
+Set up an edit and input form based on our fieldsets:
+
+    >>> from plone.fieldsets.form import FieldsetsEditForm
+    >>> from plone.fieldsets.form import FieldsetsInputForm
+
+    >>> from zope.publisher.browser import TestRequest
+    >>> request = TestRequest()
+
+Create a dummy content object as our context:
+
+    >>> class Text(object):
+    ...     interface.implements(IText)
+    ...
+    ...     def __init__(self):
+    ...         self.abstract = ''
+    ...         self.text = ''
+
+    >>> class Author(object):
+    ...     interface.implements(IAuthor)
+    ...
+    ...     def __init__(self):
+    ...         self.name = ''
+    ...         self.birthday = ''
+
+    >>> class AuthorText(Author, Text):
+    ...
+    ...     def __init__(self):
+    ...         Author.__init__(self)
+    ...         Text.__init__(self)
+
+    >>> context = AuthorText()
+
+Test the edit form:
+
+    >>> class MyFieldsetsEditForm(FieldsetsEditForm):
+    ...     form_fields = FormFieldsets(textset, authorset)
+
+    >>> edit = MyFieldsetsEditForm(context, request)
+
+    >>> edit.setUpWidgets(ignore_request=True)
+    >>> edit.widgets
+    <zope.formlib.form.Widgets object at ...>
+
+    >>> class MySimpleEditForm(FieldsetsEditForm):
+    ...     form_fields = form.Fields(IText)
+
+    >>> edit = MySimpleEditForm(context, request)
+
+    >>> edit.setUpWidgets(ignore_request=True)
+    >>> edit.widgets
+    <zope.formlib.form.Widgets object at ...>
+
+
+Test the input form:
+
+    >>> class MyFieldsetsInputForm(FieldsetsInputForm):
+    ...     form_fields = FormFieldsets(textset, authorset)
+
+    >>> input = MyFieldsetsInputForm(context, request)
+
+    >>> input.setUpWidgets(ignore_request=True)
+    >>> input.widgets
+    <zope.formlib.form.Widgets object at ...>
+
+    >>> class MySimpleInputForm(FieldsetsInputForm):
+    ...     form_fields = form.Fields(IText)
+
+    >>> input = MySimpleInputForm(context, request)
+
+    >>> input.setUpWidgets(ignore_request=True)
+    >>> input.widgets
+    <zope.formlib.form.Widgets object at ...>
