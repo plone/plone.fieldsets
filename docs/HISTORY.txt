@@ -4,6 +4,9 @@ Changelog for plone.fieldsets
 
 plone.fieldsets - 1.0.1 Unreleased
 
+    - Deprecated the convenience import, as it confused the test coverage tool.
+      [hannosch]
+
     - Added tests for all aspects of the fieldsets.
       [hannosch]
 
