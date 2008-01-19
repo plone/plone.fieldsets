@@ -4,6 +4,9 @@ Changelog for plone.fieldsets
 
 plone.fieldsets - 1.0.1 Unreleased
 
+    - Added tests for all aspects of the fieldsets.
+      [hannosch]
+
     - Added tests for the edit and input forms.
       [hannosch]
 
