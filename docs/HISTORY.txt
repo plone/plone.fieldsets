@@ -2,6 +2,9 @@ Changelog for plone.fieldsets
 
     (name of developer listed in brackets)
 
+plone.fieldsets - 1.0.2 Unreleased
+
+
 plone.fieldsets - 1.0.1 Released March 9, 2008
 
     - Deprecated the convenience import, as it confused the test coverage tool.
