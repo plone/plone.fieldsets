@@ -4,6 +4,8 @@ Changelog for plone.fieldsets
 
 plone.fieldsets - 1.0.2 Unreleased
 
+    - Added conditional import logic to make the package work without Five.
+      [hannosch]
 
 plone.fieldsets - 1.0.1 Released March 9, 2008
 
