@@ -7,6 +7,8 @@ enough information, to be grouped in the rendered output.
 
 First we define two test schemata:
 
+    >>> Provoke error!
+
     >>> from zope import interface, schema
     >>> class IText(interface.Interface):
     ...     abstract = schema.TextLine(title=u"Abstract")
