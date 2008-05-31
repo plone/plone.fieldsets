@@ -4,6 +4,10 @@ Changelog for plone.fieldsets
 
 plone.fieldsets - 1.0.2 Unreleased
 
+    - Restored Zope 2.9 compatibility. This closes
+      http://dev.plone.org/plone/ticket/8177.
+      [hannosch]
+
     - Added conditional import logic to make the package work without Five.
       [hannosch]
 
