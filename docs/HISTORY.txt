@@ -2,6 +2,9 @@ Changelog for plone.fieldsets
 
     (name of developer listed in brackets)
 
+plone.fieldsets - 1.0.3
+
+
 plone.fieldsets - 1.0.2 Released July 4, 2008
 
     - Restored Zope 2.9 compatibility. This closes
