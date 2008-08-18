@@ -5,7 +5,7 @@ version = '1.0.4'
 
 setup(name='plone.fieldsets',
       version=version,
-      description="An extension to zope.formlib which allows to group fields into different fieldsets.",
+      description="An extension to zope.formlib, which allows to group fields into different fieldsets.",
       long_description=open("README.txt").read() + "\n" +
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       classifiers=[
