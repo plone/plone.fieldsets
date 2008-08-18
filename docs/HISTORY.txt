@@ -1,71 +1,91 @@
-Changelog for plone.fieldsets
+Changelog
+=========
 
-    (name of developer listed in brackets)
+1.0.3 - August 18, 2008
+-----------------------
 
-plone.fieldsets - 1.0.3
+- Documentation updates.
+  [hannosch]
 
 
-plone.fieldsets - 1.0.2 Released July 4, 2008
+1.0.2 - July 4, 2008
+--------------------
 
-    - Restored Zope 2.9 compatibility. This closes
-      http://dev.plone.org/plone/ticket/8177.
-      [hannosch]
+- Restored Zope 2.9 compatibility. This closes
+  http://dev.plone.org/plone/ticket/8177.
+  [hannosch]
 
-    - Added conditional import logic to make the package work without Five.
-      [hannosch]
+- Added conditional import logic to make the package work without Five.
+  [hannosch]
 
-plone.fieldsets - 1.0.1 Released March 9, 2008
 
-    - Deprecated the convenience import, as it confused the test coverage tool.
-      [hannosch]
+1.0.1 - March 9, 2008
+---------------------
 
-    - Added tests for all aspects of the fieldsets.
-      [hannosch]
+- Deprecated the convenience import, as it confused the test coverage tool.
+  [hannosch]
 
-    - Added tests for the edit and input forms.
-      [hannosch]
+- Added tests for all aspects of the fieldsets.
+  [hannosch]
 
-plone.fieldsets - 1.0 Released August 13, 2007
+- Added tests for the edit and input forms.
+  [hannosch]
 
-    - No changes.
-      [hannosch]
 
-plone.fieldsets - 1.0rc3 Released July 28, 2007
+1.0 - August 13, 2007
+---------------------
 
-    - Corrected missing history.
-      [hannosch]
+- No changes.
+  [hannosch]
 
-plone.fieldsets - 1.0rc2 Released July 27, 2007
 
-    - Removed unnecessary adapters definition in FieldsetsInputForm.
-      [davconvent]
+1.0rc3 - July 28, 2007
+----------------------
 
-    - Added FieldsetsInputForm to the available fieldsets forms.
-      [davconvent]
+- Corrected missing history.
+  [hannosch]
 
-plone.fieldsets - 1.0rc1 Released July 9, 2007
 
-    - Removed useless setup.cfg.
-      [hannosch]
+1.0rc2 - July 27, 2007
+----------------------
 
-plone.fieldsets - 1.0b3 Released March 5, 2007
+- Removed unnecessary adapters definition in FieldsetsInputForm.
+  [davconvent]
 
-    - Added new optional description attribute to fieldsets.
-      [hannosch]
+- Added FieldsetsInputForm to the available fieldsets forms.
+  [davconvent]
 
-plone.fieldsets - 1.0b2 Released May 1, 2007
 
-    - No changes.
-      [hannosch]
+1.0rc1 - July 9, 2007
+---------------------
 
-plone.fieldsets - 1.0b1 Released March 5, 2007
+- Removed useless setup.cfg.
+  [hannosch]
 
-    - Fixed error reporting by referencing the widgets on the form itself on
-      the individual fieldsets rather than copying them.
-      [duncan, nouri]
 
-    - Initial implementation of the fieldsets class and the edit form support.
-      [hannosch]
+1.0b3 - March 5, 2007
+---------------------
 
-    - Initial package structure.
-      [zopeskel]
+- Added new optional description attribute to fieldsets.
+  [hannosch]
+
+
+1.0b2 - May 1, 2007
+-------------------
+
+- No changes.
+  [hannosch]
+
+
+1.0b1 - March 5, 2007
+---------------------
+
+- Fixed error reporting by referencing the widgets on the form itself on
+  the individual fieldsets rather than copying them.
+  [duncan, nouri]
+
+- Initial implementation of the fieldsets class and the edit form support.
+  [hannosch]
+
+- Initial package structure.
+  [zopeskel]
