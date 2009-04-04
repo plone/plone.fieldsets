@@ -1,7 +1,7 @@
 import os
 from setuptools import setup, find_packages
 
-version = '2.0a1'
+version = '2.0a2'
 
 setup(name='plone.fieldsets',
       version=version,
