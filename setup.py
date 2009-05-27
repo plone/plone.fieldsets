@@ -23,15 +23,18 @@ setup(name='plone.fieldsets',
       namespace_packages=['plone'],
       include_package_data=True,
       zip_safe=False,
+      extras_require=dict(
+        test=[
+            'zope.app.form',
+            'zope.publisher',
+            'zope.testing',
+            ],
+      ),
       install_requires=[
         'setuptools',
         'zope.component',
-        'zope.deferredimport',
         'zope.formlib',
         'zope.interface',
-        'zope.publisher',
         'zope.schema',
-        'zope.testing',
-        'zope.app.form',
       ],
       )
