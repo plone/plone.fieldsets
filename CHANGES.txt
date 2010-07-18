@@ -1,14 +1,14 @@
 Changelog
 =========
 
-2.0 - unreleased
+2.0 - 2010-07-18
 ----------------
 
 - Update license to GPL version 2 only.
   [hannosch]
 
 - Clarify test dependencies and remove deprecated code, allowing us to remove
-  the zope.deferredimport dependency.
+  the `zope.deferredimport` dependency.
   [hannosch]
 
 2.0a1 - 2009-04-04
