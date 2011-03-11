@@ -1,10 +1,7 @@
 from plone.fieldsets.interfaces import IFormFieldsets
 from zope.formlib import form
 
-try:
-    from Products.Five.formlib.formbase import FormBase, EditForm
-except ImportError:
-    from zope.formlib.form import FormBase, EditForm
+from five.formlib.formbase import FormBase, EditForm
 
 
 class FieldsetsEditForm(EditForm):

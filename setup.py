@@ -33,6 +33,7 @@ setup(name='plone.fieldsets',
       ),
       install_requires=[
         'setuptools',
+        'five.formlib',
         'zope.component',
         'zope.formlib',
         'zope.interface',

@@ -4,6 +4,8 @@ Changelog
 2.0.1 - unreleased
 ------------------
 
+- Require five.formlib to call processInputs before rendering the fieldset.
+  [vincentfretin]
 
 2.0 - 2010-07-18
 ----------------
