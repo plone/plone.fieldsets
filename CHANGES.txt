@@ -1,7 +1,7 @@
 Changelog
 =========
 
-2.0.1 - unreleased
+2.0.1 - 2011-04-03
 ------------------
 
 - Require five.formlib on Zope 2.13 to call processInputs before rendering
