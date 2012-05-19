@@ -26,7 +26,6 @@ setup(name='plone.fieldsets',
       zip_safe=False,
       extras_require=dict(
         test=[
-            'zope.app.form',
             'zope.publisher',
             'zope.testing',
             ],

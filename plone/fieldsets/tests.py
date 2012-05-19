@@ -10,8 +10,8 @@ OPTIONFLAGS = (doctest.ELLIPSIS |
 
 
 def formSetUp(test):
-    from zope.app.form.browser import TextWidget
-    from zope.app.form.interfaces import IInputWidget
+    from zope.formlib.textwidgets import TextWidget
+    from zope.formlib.interfaces import IInputWidget
     from zope.publisher.interfaces.browser import IBrowserRequest
     from zope.schema.interfaces import ITextLine
     testing.setUp(test)
