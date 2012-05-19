@@ -5,8 +5,7 @@ from zope.component import testing
 
 from zope.testing import doctest
 
-OPTIONFLAGS = (doctest.REPORT_ONLY_FIRST_FAILURE |
-               doctest.ELLIPSIS |
+OPTIONFLAGS = (doctest.ELLIPSIS |
                doctest.NORMALIZE_WHITESPACE)
 
 
@@ -30,6 +29,3 @@ def test_suite():
         doctest.DocTestSuite(
             'plone.fieldsets.fieldsets'),
         ))
-
-if __name__ == '__main__':
-    unittest.main(defaultTest='test_suite')
