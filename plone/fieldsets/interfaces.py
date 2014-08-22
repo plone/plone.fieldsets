@@ -19,7 +19,7 @@ class IFormFieldsets(IFormFields):
         an existing fieldset.
 
         Return a new IFormFieldsets which is a nested representation of the two.
-        
+
         In order to fullfill the IFormFields API we make all fields available
         from the base IFormFieldsets.
         """

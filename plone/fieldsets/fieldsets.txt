@@ -64,7 +64,7 @@ In order to use the fieldsets we wrap the two schemata first:
 
     >>> textset = FormFieldsets(IText)
     >>> textset.label = u'Label for text fieldset.'
-    
+
     >>> authorset = FormFieldsets(IAuthor)
     >>> authorset.label = u'Label for author fieldset.'
 
