@@ -5,7 +5,8 @@ Changelog
 2.0.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Whitespace cleanup, git ignores.
+  [gforcada, rnixx]
 
 
 2.0.2 (2012-07-02)
